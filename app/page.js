@@ -298,10 +298,10 @@ export default function PickleBusinessApp() {
           <div className="grid md:grid-cols-2 gap-6">
             {/* Order Summary */}
 <div className="p-4 bg-white rounded-lg shadow-md">
-  <h2 className="text-xl font-semibold mb-4 text-center">Order Summary</h2>
+  <h2 className="text-xl font-semibold mb-4 text-center text-black">Order Summary</h2>
 
   {cart.length === 0 ? (
-    <p className="text-gray-500 text-center">Your cart is empty</p>
+    <p className="text-gray-500 text-center text-black">Your cart is empty</p>
   ) : (
     <>
       {cart.map((item, index) => (
@@ -331,19 +331,19 @@ export default function PickleBusinessApp() {
       {/* Calculation Section */}
       <div className="border-t mt-4 pt-4 space-y-2 text-right">
         <p>
-          <span className="font-medium">Subtotal:</span> ₹{totalAmount.toFixed(2)}
+          <span className="font-medium text-black">Subtotal:</span> ₹{totalAmount.toFixed(2)}
         </p>
         <p>
-          <span className="font-medium">Delivery:</span> ₹50.00
+          <span className="font-medium text-black">Delivery:</span> ₹50.00
         </p>
         <p>
-          <span className="font-medium">GST (18%):</span> ₹
+          <span className="font-medium text-black">GST (18%):</span> ₹
           {((totalAmount + 50) * 0.18).toFixed(2)}
         </p>
 
         <hr className="my-2" />
 
-        <p className="text-lg font-bold">
+        <p className="text-lg font-bold text-black">
           Total Payable: ₹{((totalAmount + 50) * 1.18).toFixed(2)}
         </p>
       </div>
