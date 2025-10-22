@@ -310,14 +310,14 @@ export default function PickleBusinessApp() {
           className="flex justify-between items-center border-b py-2"
         >
           <div>
-            <p className="font-medium">{item.productName}</p>
-            <p className="text-sm text-gray-600">
+            <p className="font-medium text-black">{item.productName}</p>
+            <p className="text-sm text-gray-600 text-black">
               {item.weight} × {item.quantity}
             </p>
           </div>
 
           <div className="flex items-center space-x-2">
-            <p className="font-semibold">₹{item.total}</p>
+            <p className="font-semibold text-black">₹{item.total}</p>
             <button
               onClick={() => setCart(cart.filter((_, i) => i !== index))}
               className="text-red-500 hover:text-red-700"
@@ -329,7 +329,7 @@ export default function PickleBusinessApp() {
       ))}
 
       {/* Calculation Section */}
-      <div className="border-t mt-4 pt-4 space-y-2 text-right">
+      <div className="border-t mt-4 pt-4 space-y-2 text-right text-black">
         <p>
           <span className="font-medium text-black">Subtotal:</span> ₹{totalAmount.toFixed(2)}
         </p>
