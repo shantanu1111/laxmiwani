@@ -261,29 +261,42 @@ export default function PickleBusinessApp() {
 
     const totalAmount = cart.reduce((sum, item) => sum + item.total, 0);
 
-    const sendToWhatsApp = () => {
-      if (!customerDetails.name || !customerDetails.phone || !customerDetails.address) {
-        alert('Please fill all customer details');
-        return;
-      }
+const sendToWhatsApp = () => {
+  if (!customerDetails.name || !customerDetails.phone || !customerDetails.address) {
+    alert('Please fill all customer details');
+    return;
+  }
 
-      let message = `*New Pickle Order*\n\n`;
-      message += `*Customer Details:*\n`;
-      message += `Name: ${customerDetails.name}\n`;
-      message += `Phone: ${customerDetails.phone}\n`;
-      message += `Address: ${customerDetails.address}, ${customerDetails.city} - ${customerDetails.pincode}\n\n`;
-      message += `*Order Items:*\n`;
-      
-      cart.forEach((item, index) => {
-        message += `${index + 1}. ${item.productName} (${item.weight}) x ${item.quantity} = ₹${item.total}\n`;
-      });
-      
-      message += `\n*Total Amount: ₹${totalAmount}*`;
+  // Calculate breakdown
+  const subtotal = cart.reduce((sum, item) => sum + item.total, 0);
+  const delivery = 50.00;
+  const gst = (subtotal + delivery) * 0.18;
+  const totalPayable = subtotal + delivery + gst;
 
-      const whatsappNumber = '7798159828'; // Replace with your business WhatsApp number
-      const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-      window.open(url, '_blank');
-    };
+  let message = `*📦 New Pickle Order*\n\n`;
+  
+  message += `*👤 Customer Details:*\n`;
+  message += `Name: ${customerDetails.name}\n`;
+  message += `Phone: ${customerDetails.phone}\n`;
+  message += `Address: ${customerDetails.address}, ${customerDetails.city} - ${customerDetails.pincode}\n\n`;
+  
+  message += `*🛒 Order Items:*\n`;
+  cart.forEach((item, index) => {
+    message += `${index + 1}. ${item.productName}\n`;
+    message += `   ${item.weight} × ${item.quantity} = ₹${item.total.toFixed(2)}\n`;
+  });
+  
+  message += `\n*💰 Payment Summary:*\n`;
+  message += `Subtotal: ₹${subtotal.toFixed(2)}\n`;
+  message += `Delivery: ₹${delivery.toFixed(2)}\n`;
+  message += `GST (18%): ₹${gst.toFixed(2)}\n`;
+  message += `───────────────\n`;
+  message += `*Total Payable: ₹${totalPayable.toFixed(2)}*`;
+
+  const whatsappNumber = '7798159828';
+  const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+  window.open(url, '_blank');
+};
 
     return (
       <div className="min-h-screen bg-gray-50 p-4 md:p-6">
