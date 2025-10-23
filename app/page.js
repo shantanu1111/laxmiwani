@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import { ShoppingCart, Phone, Mail, MapPin, ChevronRight, Package, X } from 'lucide-react';
 
 // Product data
+// Product data
 const products = [
   {
     id: 1,
@@ -14,8 +15,8 @@ const products = [
     basePrice: 150,
     weights: [
       { value: "250g", price: 150 },
-      { value: "500g", price: 280 },
-      { value: "1kg", price: 520 }
+      { value: "500g", price: 300 },
+      { value: "1kg", price: 600 }
     ]
   },
   {
@@ -25,9 +26,9 @@ const products = [
     image: "/images/products/lemon.png",
     basePrice: 120,
     weights: [
-      { value: "250g", price: 120 },
-      { value: "500g", price: 220 },
-      { value: "1kg", price: 400 }
+      { value: "250g", price: 160 },
+      { value: "500g", price: 250 },
+      { value: "1kg", price: 500 }
     ]
   },
   {
@@ -38,8 +39,8 @@ const products = [
     basePrice: 180,
     weights: [
       { value: "250g", price: 180 },
-      { value: "500g", price: 340 },
-      { value: "1kg", price: 650 }
+      { value: "500g", price: 300 },
+      { value: "1kg", price: 600 }
     ]
   },
   {
@@ -49,9 +50,9 @@ const products = [
     image: "/images/products/mirchi.png",
     basePrice: 140,
     weights: [
-      { value: "250g", price: 140 },
-      { value: "500g", price: 260 },
-      { value: "1kg", price: 480 }
+      { value: "250g", price: 110 },
+      { value: "500g", price: 200 },
+      { value: "1kg", price: 400 }
     ]
   },
   {
@@ -61,21 +62,45 @@ const products = [
     image: "/images/products/haldi.png",
     basePrice: 160,
     weights: [
-      { value: "250g", price: 160 },
-      { value: "500g", price: 300 },
-      { value: "1kg", price: 580 }
+      { value: "250g", price: 210 },
+      { value: "500g", price: 400 },
+      { value: "1kg", price: 800 }
     ]
   },
   {
     id: 6,
-    name: "Ginger Pickle",
-    description: "Zesty ginger pickle with authentic taste",
-    image: "/images/products/ginger.png",
+    name: "Raw mango jam",
+    description: "Zesty raw mango jam with authentic taste",
+    image: "/images/products/samba.png",
     basePrice: 130,
     weights: [
-      { value: "250g", price: 130 },
-      { value: "500g", price: 240 },
-      { value: "1kg", price: 450 }
+      { value: "250g", price: 180 },
+      { value: "500g", price: 250 },
+      { value: "1kg", price: 500 }
+    ]
+  },
+  {
+    id: 7,
+    name: "Date Pickle",
+    description: "Flavorful garlic pickle with robust spices",
+    image: "/images/products/dates.png",
+    basePrice: 170,
+    weights: [
+      { value: "250g", price: 220 },
+      { value: "500g", price: 400 },
+      { value: "1kg", price: 820 }
+    ]
+  },
+  {
+    id: 8,
+    name: "Mango Pickle - jaggery",
+    description: "Traditional spicy mango pickle made with authentic spices - jaggery",
+    image: "/images/products/mango.png",
+    basePrice: 155,
+    weights: [
+      { value: "250g", price: 155 },
+      { value: "500g", price: 250 },
+      { value: "1kg", price: 500 }
     ]
   }
 ];
