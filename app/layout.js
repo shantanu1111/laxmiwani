@@ -26,7 +26,7 @@ const greatVibes = Great_Vibes({
 export const metadata = {
   title: "LaxmiWani - Homemade Pickles",
   description: "Made with love, delivered with care. Authentic homemade Indian pickles with traditional recipes.",
-  metadataBase: new URL('https://yourdomain.com'), // Replace with your actual domain
+  metadataBase: new URL('https://laxmiwani.com'), // Replace with your actual domain
   openGraph: {
     title: "LaxmiWani - Homemade Pickles",
     description: "Made with love, delivered with care. Authentic homemade Indian pickles with traditional recipes.",

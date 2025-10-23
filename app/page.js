@@ -126,7 +126,7 @@ export default function PickleBusinessApp() {
         total: selectedWeight.price * quantity
       };
       setCart([...cart, cartItem]);
-      alert('Added to cart!');
+      // alert('Added to cart!');
       setCurrentPage('home');
     };
 
@@ -670,9 +670,9 @@ const sendToWhatsApp = () => {
             <div>
               <h3 className="font-semibold text-lg text-black">Address</h3>
               <p className="text-gray-600">
-                123 Pickle Street<br />
-                Nagpur, Maharashtra<br />
-                India - 440001
+                Swagat,Shriniwas colony<br />
+                Wardha, Maharashtra<br />
+                India - 442 001
               </p>
             </div>
           </div>
@@ -705,7 +705,7 @@ const sendToWhatsApp = () => {
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold text-center mb-8">Privacy Policy</h1>
         
-        <div className="bg-white rounded-xl shadow-lg p-6 md:p-8 space-y-6">
+        <div className="bg-white rounded-xl shadow-lg p-6 md:p-8 space-y-6 text-black">
           <section>
             <h2 className="text-2xl font-bold mb-3">Information We Collect</h2>
             <p className="text-gray-700">
@@ -735,7 +735,7 @@ const sendToWhatsApp = () => {
             <h2 className="text-2xl font-bold mb-3">Contact Us</h2>
             <p className="text-gray-700">
               If you have any questions about our privacy policy, please contact us at 
-              info@premiumpickles.com or call +91 7798159828
+              info@laxmiwani.com or call +91 7798159828
               .
             </p>
           </section>
